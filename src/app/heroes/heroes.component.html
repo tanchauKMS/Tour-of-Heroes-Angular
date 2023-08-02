@@ -52,45 +52,45 @@
     <p>
       <span>Enter the name: </span> 
       <input type="text" minlength="4" placeholder="Name" 
-      formControlName="name">
+      formControlName="name" required>
     </p>
 
-   <!-- <div *ngIf="heroName.value == '' " class="error-message">
-     Name is required.
-   </div> -->
-   <!-- <div *ngIf="newHero.value.length < 4" class="error-message">
-     Name must be at least 4 characters long.
-   </div> -->
+   <div *ngIf="addHeroForm.controls['name'].errors?.['required']" class="error-message">
+    <i class="fas fa-exclamation-triangle"></i> Name is required.
+   </div>
+   <div *ngIf="addHeroForm.controls['name'].errors?.['minlength']" class="error-message">
+    <i class="fas fa-exclamation-triangle"></i> Name must be at least 4 characters long.
+   </div>
 
     <p>
       <span>Enter the skill: </span> 
       <input type="text" placeholder="Skill" 
-       formControlName="skill">
+       formControlName="skill" required>
 
     </p>
-    <!-- <div *ngIf="skill.value == '' " class="error-message">
-      Skill is required.
-    </div> -->
+    <div *ngIf="addHeroForm.controls['skill'].errors?.['required']" class="error-message">
+      <i class="fas fa-exclamation-triangle"></i> Skill is required.
+    </div>
 
     <p>
       <span>Enter the position: </span> 
       <input type="text" placeholder="Position" 
-       formControlName="position">
+       formControlName="position" required>
     </p>
 
-    <!-- <div *ngIf="heroPosition.value == '' " class="error-message">
-      Position is required.
-    </div> -->
+    <div *ngIf="addHeroForm.controls['position'].errors?.['required']" class="error-message">
+      <i class="fas fa-exclamation-triangle"></i> Position is required.
+    </div>
 
     <p>
       <span>Enter the HP: </span>
        <input type="number" placeholder="0"
-        formControlName="hp">
+        formControlName="hp" required>
        >
     </p>
-    <!-- <div *ngIf="heroHP.value == '' " class="error-message">
-      HP is required.
-    </div> -->
+    <div *ngIf="addHeroForm.controls['hp'].errors?.['required']" class="error-message">
+      <i class="fas fa-exclamation-triangle"></i> HP is required.
+    </div>
 
     <!-- Buttons for saving and canceling -->
     <!-- <button class="add-button" 
