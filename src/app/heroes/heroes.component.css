@@ -1,0 +1,62 @@
+h2 {
+    color: blue;
+    text-align: center;
+  }
+  
+  .add-button {
+    background-color: green;
+    color: white;
+    width: 18%;
+
+    font-size: medium;
+  }
+  
+  .delete-button {
+    background-color: red;
+    color: white;
+    width: 18%;
+
+    font-size: medium;
+  }
+  .update-button {
+    background-color: rgb(255, 153, 0);
+    color: white;
+    width: 14%;
+
+    font-size: medium;
+  }
+  .read-button {
+    background-color: rgb(55, 0, 255);
+    color: white;
+    width: 18%;
+
+    font-size: medium;
+  }
+
+.heroes-table{
+  width: 100%;
+  text-align: center;
+
+}
+th {
+  text-align: center;
+}
+td {
+  text-align: center;
+}
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  padding-top: 10%;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.add-hero-windows {
+  border: 1px solid blue;
+  width: 50%;
+  height: 50%;
+  padding-left: 10%;
+}

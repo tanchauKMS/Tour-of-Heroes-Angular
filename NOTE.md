@@ -1,0 +1,1 @@
+[Angular sn-serve too long to response](https://stackoverflow.com/questions/67598130/angular-12-ng-serve-builds-apps-slowly-almost-like-production-builds)

@@ -1,0 +1,102 @@
+<!-- Existing table code -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<h2>Heroes Managements</h2>
+<table class="heroes heroes-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Skill</th>
+      <th>Position</th>
+      <th>HP</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hero of heroes">
+      <td>{{ hero.id }}</td>
+      <td>{{ hero.name }}</td>
+      <td>{{ hero.skill }}</td>
+      <td>{{ hero.position }}</td>
+      <td>{{ hero.hp }}</td>
+      <td>
+        <a routerLink="/views/{{ hero.id }}">
+          <button class="read-button">
+            <i class="fas fa-eye"></i>
+          </button>
+        </a>
+        <a routerLink="/detail/{{ hero.id }}">
+          <button class="update-button">
+            <i class="fas fa-edit"></i>
+          </button>
+        </a>
+        <button type="button" class="delete-button" title="delete hero" (click)="delete(hero)">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Add a button for adding a hero -->
+<button class="add-button" (click)="openModal()">
+  <i class="fas fa-plus"></i> Add new hero
+</button>
+
+<!-- Modal -->
+<div class="modal add-hero-windows" [ngClass]="{ 'open': isModalOpen }">
+  <div class="modal-content" *ngIf="isModalOpen" >
+    <form [formGroup]="addHeroForm" (ngSubmit)="onClickAddHero()">
+    <h3>Add the new hero</h3>
+    <!-- Hero information input fields -->
+    <p>
+      <span>Enter the name: </span> 
+      <input type="text" minlength="4" placeholder="Name" 
+      formControlName="name">
+    </p>
+
+   <!-- <div *ngIf="heroName.value == '' " class="error-message">
+     Name is required.
+   </div> -->
+   <!-- <div *ngIf="newHero.value.length < 4" class="error-message">
+     Name must be at least 4 characters long.
+   </div> -->
+
+    <p>
+      <span>Enter the skill: </span> 
+      <input type="text" placeholder="Skill" 
+       formControlName="skill">
+
+    </p>
+    <!-- <div *ngIf="skill.value == '' " class="error-message">
+      Skill is required.
+    </div> -->
+
+    <p>
+      <span>Enter the position: </span> 
+      <input type="text" placeholder="Position" 
+       formControlName="position">
+    </p>
+
+    <!-- <div *ngIf="heroPosition.value == '' " class="error-message">
+      Position is required.
+    </div> -->
+
+    <p>
+      <span>Enter the HP: </span>
+       <input type="number" placeholder="0"
+        formControlName="hp">
+       >
+    </p>
+    <!-- <div *ngIf="heroHP.value == '' " class="error-message">
+      HP is required.
+    </div> -->
+
+    <!-- Buttons for saving and canceling -->
+    <!-- <button class="add-button" 
+    (click)="add(heroName.value, heroSkill.value, heroPosition.value, +heroHP.value)">Save</button> -->
+    <button class="add-button" type="submit">Save</button>
+    <button class="cancel-button" (click)="closeModal()">Cancel</button>
+  </form>
+  </div>
+</div>

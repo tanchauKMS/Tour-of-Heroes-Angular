@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<nav class="navbar">
+  <a routerLink="/heroes"><i class="fas fa-rocket "></i>
+    Heroes</a>
+  <a routerLink="/dashboard">
+    <i class="fas fa-tachometer-alt"></i>
+Dashboard</a>
+  <a routerLink="/search">
+    <i class="fas fa-search"></i>
+    Search</a>
+  <a routerLink="/messages">
+    <div *ngIf="messageService.messages.length"> 
+      <i class="fas fa-bell"></i> <i class="fas fa-circle"></i>
+    </div>
+    <div *ngIf="!messageService.messages.length"> 
+      <i class="fas fa-bell"></i>
+    </div>
+    Notification ({{messageService.messages.length}})</a>
+</nav>
+<router-outlet></router-outlet>
