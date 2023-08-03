@@ -54,7 +54,7 @@ export class HeroesComponent implements OnInit {
   onClickAddHero(): void {
     const hero = this.addHeroForm.value;
     console.log(hero);
-    if (!hero.name || !hero.skill || !hero.position || hero.hp) {
+    if (!hero.name || !hero.skill || !hero.position || !hero.hp) {
       console.log("Error in inputing the component");
       this.isShowAlert = true;
     }
