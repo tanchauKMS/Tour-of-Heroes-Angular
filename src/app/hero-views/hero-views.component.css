@@ -1,13 +1,46 @@
+.add-button {
+  background-color: green;
+  color: white;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+}
+
+/* styles.css */
+
+/* Container styles */
+.container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+/* Heading styles */
 h2 {
-    color: blue;
-  }
-  
-  .add-button {
-    background-color: green;
-    color: white;
-  }
-  
-  .delete-button {
-    background-color: red;
-    color: white;
-  }
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Detail styles */
+.detail {
+  margin-bottom: 10px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
