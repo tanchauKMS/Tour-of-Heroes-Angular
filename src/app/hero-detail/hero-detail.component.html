@@ -1,4 +1,4 @@
-<div *ngIf="hero">
+<div *ngIf="hero" class="container">
   <h2>Update the Hero</h2>
   <div><span>id: </span>{{ hero.id }}</div>
   <form [formGroup]="heroForm" (ngSubmit)="onClickSubmit()">
