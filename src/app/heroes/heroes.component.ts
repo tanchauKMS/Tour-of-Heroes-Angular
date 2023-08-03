@@ -20,6 +20,7 @@ export class HeroesComponent implements OnInit {
   addHeroForm!: FormGroup;
 
   isModalOpen: boolean = false; // Flag to control modal visibility
+  isShowAlert: boolean = false;
 
   openModal() {
     if (this.isModalOpen) {
@@ -37,7 +38,6 @@ export class HeroesComponent implements OnInit {
   constructor(
     private heroService: HeroService,
     private messageService: MessageService,
-    private route: ActivatedRoute,
     private location: Location
   ) { }
 
@@ -54,10 +54,17 @@ export class HeroesComponent implements OnInit {
   onClickAddHero(): void {
     const hero = this.addHeroForm.value;
     console.log(hero);
-    this.heroService.addHero(hero as Hero)
-    .subscribe(hero => {
-      this.heroes.push(hero);
-    })
+    if (!hero.name || !hero.skill || !hero.position || hero.hp) {
+      console.log("Error in inputing the component");
+      this.isShowAlert = true;
+    }
+    else {
+      this.heroService.addHero(hero as Hero)
+      .subscribe(hero => {
+        this.heroes.push(hero);
+      })
+    }
+
   }
 
   onSelect(hero: Hero): void {

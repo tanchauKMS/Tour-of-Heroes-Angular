@@ -55,10 +55,10 @@
       formControlName="name" required>
     </p>
 
-   <div *ngIf="addHeroForm.controls['name'].errors?.['required']" class="error-message">
+   <div *ngIf="addHeroForm.controls['name'].errors?.['required'] && isShowAlert" class="error-message">
     <i class="fas fa-exclamation-triangle"></i> Name is required.
    </div>
-   <div *ngIf="addHeroForm.controls['name'].errors?.['minlength']" class="error-message">
+   <div *ngIf="addHeroForm.controls['name'].errors?.['minlength'] && isShowAlert" class="error-message">
     <i class="fas fa-exclamation-triangle"></i> Name must be at least 4 characters long.
    </div>
 
@@ -68,7 +68,7 @@
        formControlName="skill" required>
 
     </p>
-    <div *ngIf="addHeroForm.controls['skill'].errors?.['required']" class="error-message">
+    <div *ngIf="addHeroForm.controls['skill'].errors?.['required']  && isShowAlert" class="error-message">
       <i class="fas fa-exclamation-triangle"></i> Skill is required.
     </div>
 
@@ -78,7 +78,7 @@
        formControlName="position" required>
     </p>
 
-    <div *ngIf="addHeroForm.controls['position'].errors?.['required']" class="error-message">
+    <div *ngIf="addHeroForm.controls['position'].errors?.['required']  && isShowAlert" class="error-message">
       <i class="fas fa-exclamation-triangle"></i> Position is required.
     </div>
 
@@ -88,13 +88,10 @@
         formControlName="hp" required>
        >
     </p>
-    <div *ngIf="addHeroForm.controls['hp'].errors?.['required']" class="error-message">
+    <div *ngIf="addHeroForm.controls['hp'].errors?.['required'] && isShowAlert" class="error-message">
       <i class="fas fa-exclamation-triangle"></i> HP is required.
     </div>
 
-    <!-- Buttons for saving and canceling -->
-    <!-- <button class="add-button" 
-    (click)="add(heroName.value, heroSkill.value, heroPosition.value, +heroHP.value)">Save</button> -->
     <button class="add-button" type="submit">Save</button>
     <button class="cancel-button" (click)="closeModal()">Cancel</button>
   </form>
