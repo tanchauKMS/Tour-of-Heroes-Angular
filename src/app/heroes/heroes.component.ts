@@ -59,6 +59,7 @@ export class HeroesComponent implements OnInit {
       this.isShowAlert = true;
     }
     else {
+      this.isShowAlert = true;
       this.heroService.addHero(hero as Hero)
       .subscribe(hero => {
         this.heroes.push(hero);

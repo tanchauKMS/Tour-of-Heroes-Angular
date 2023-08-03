@@ -42,7 +42,7 @@ export class HeroDetailComponent implements OnInit {
       this.showAlert = true
     }
     else {
-    this.showAlert = false;
+    this.showAlert = true;
     this.heroService.updateHero(hero)
       .subscribe(
       () => this.goBack()
