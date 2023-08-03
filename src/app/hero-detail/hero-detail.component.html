@@ -59,10 +59,9 @@
     </div>
 
     <button type="submit" (click)="onClickSubmit()">Save</button>
+    <button type="button" (click)="goBack()">Go Back</button>
+
   </form>
-
-  <button type="button" (click)="goBack()">Go Back</button>
-
   <div *ngIf="showAlert" class="alert">
     Please fill in all the fields.
   </div>

@@ -41,7 +41,16 @@ input[type="number"] {
 }
 
 
-button[type="submit"],
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #1dfa00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
 button[type="button"] {
   padding: 10px 20px;
   background-color: #007bff;
@@ -52,7 +61,10 @@ button[type="button"] {
   margin-right: 10px;
 }
 
-button[type="submit"]:hover,
+button[type="submit"]:hover {
+  background-color: #95f75c;
+}
+
 button[type="button"]:hover {
-  background-color: #0056b3;
+  background-color: #9fceff;
 }
