@@ -56,9 +56,10 @@ table {
 
 .add-hero-windows {
   border: 1px solid blue;
-  width: 50%;
+  width: 30%;
   height: 50%;
   padding-left: 10%;
+  padding-right: 10%;
 }
 
 .error-message {
