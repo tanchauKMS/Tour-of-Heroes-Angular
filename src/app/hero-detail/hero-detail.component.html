@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <div *ngIf="hero" class="container">
   <h2>Update the Hero</h2>
   <div><span>id: </span>{{ hero.id }}</div>
@@ -11,13 +12,10 @@
            class="alert alert-danger">
 
         <div *ngIf="heroForm.controls['name'].errors?.['required']" class="error-message">
-          Name is required.
+          <i class="fas fa-exclamation-triangle"></i> Name is required.
         </div>
         <div *ngIf="heroForm.controls['name'].errors?.['minlength']" class="error-message">
-          Name must be at least 4 characters long.
-        </div>
-        <div *ngIf="heroForm.controls['name'].errors?.['forbiddenName']" class="error-message">
-          Name cannot be Bob.
+          <i class="fas fa-exclamation-triangle"></i> Name must be at least 4 characters long.
         </div>
 
       </div>
@@ -30,7 +28,7 @@
     <div *ngIf="heroForm.controls['skill']?.invalid"
          class="alert alert-danger">
       <div *ngIf="heroForm.controls['skill'].errors?.['required']" class="error-message">
-        Hero skill is required.
+        <i class="fas fa-exclamation-triangle"></i> Hero skill is required.
       </div>
     </div>
 
@@ -41,7 +39,7 @@
     <div *ngIf="heroForm.controls['position'].invalid"
          class="alert alert-danger">
       <div *ngIf="heroForm.controls['position'].errors?.['required']" class="error-message">
-        Hero position is required.
+        <i class="fas fa-exclamation-triangle"></i> Hero position is required.
       </div>
     </div>
 
@@ -51,10 +49,10 @@
     <div *ngIf="heroForm.controls['hp'].invalid"
          class="alert alert-danger">
       <div *ngIf="heroForm.controls['hp'].errors?.['required']" class="error-message">
-        Hero HP is required.
+        <i class="fas fa-exclamation-triangle"></i> Hero HP is required.
       </div>
       <div *ngIf="heroForm.controls['hp'].errors?.['min']" class="error-message">
-        Hero HP must be at least 0.
+        <i class="fas fa-exclamation-triangle"></i> Hero HP must be at least 0.
       </div>
     </div>
 
