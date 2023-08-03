@@ -86,7 +86,7 @@
       <span>Enter the HP: </span>
        <input type="number" placeholder="0"
         formControlName="hp" required>
-       >
+       
     </p>
     <div *ngIf="addHeroForm.controls['hp'].errors?.['required'] && isShowAlert" class="error-message">
       <i class="fas fa-exclamation-triangle"></i> HP is required.

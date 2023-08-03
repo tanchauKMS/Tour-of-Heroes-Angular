@@ -1,76 +1,77 @@
 .error-message {
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    background-color: red;
-    width: 80%;
-    border-radius: 4px;
-    padding-bottom: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: red;
+  width: 80%;
+  border-radius: 4px;
+  padding-bottom: 10px;
 
-  }
+}
 
 /* styles.css */
 
 /* Container styles */
 .container {
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f5f5f5;
-  width: 80%;
-  align-content: center;
+margin: 20px;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+background-color: #f5f5f5;
+width: 80%;
+align-content: center;
 }
 
 /* Heading styles */
 h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 10px;
 }
 
 /* Form styles */
 form {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 label {
-  font-weight: bold;
+font-weight: bold;
 }
 
 input[type="text"],
 input[type="number"] {
-  width: 100%;
-  padding: 10%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
+width: 100%;
+border: 1px solid #ccc;
+border-radius: 4px;
+margin-bottom: 10px;
+padding-top: 4px;
+padding-bottom: 4px;
 }
 
 
 button[type="submit"] {
-  padding: 10px 20px;
-  background-color: #1dfa00;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
+padding: 10px 20px;
+background-color: #1dfa00;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-right: 10px;
 }
 
 button[type="button"] {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
+padding: 10px 20px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-right: 10px;
 }
 
 button[type="submit"]:hover {
-  background-color: #95f75c;
+background-color: #95f75c;
 }
 
 button[type="button"]:hover {
-  background-color: #9fceff;
+background-color: #9fceff;
 }
