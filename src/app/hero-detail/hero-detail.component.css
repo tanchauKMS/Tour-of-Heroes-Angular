@@ -3,6 +3,9 @@
     font-weight: bold;
     background-color: red;
     width: 80%;
+    border-radius: 4px;
+    padding-bottom: 10px;
+
   }
 
 /* styles.css */
@@ -15,6 +18,7 @@
   border-radius: 5px;
   background-color: #f5f5f5;
   width: 80%;
+  align-content: center;
 }
 
 /* Heading styles */
@@ -35,8 +39,8 @@ label {
 
 input[type="text"],
 input[type="number"] {
-  width: 80%;
-  padding: 8px;
+  width: 100%;
+  padding: 10%;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
